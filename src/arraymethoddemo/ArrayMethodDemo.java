@@ -1,31 +1,47 @@
 package arraymethoddemo;
 import java.util.Arrays;
 import java.util.Scanner;
-
 class MyClass{
-    /* public void printFirstElement(float[] a)
-{
-System.out.println("The first element is " + a[0]);
-}
-
-     */
-    public int[] returnArray(int k)
+    public float[][] returnArray(int k, int l)
             {
-                int[] a = new int[k];
-                for (int i = 0; i < a.length; i++)
+                System.out.println("Введите значения элементов массива ");
+                float[][] a = new float[k][l];
+                for (int i = 0; i < k; i++)
                 {
-                    Scanner input = new Scanner(System.in);
-                    a[i] = input.nextInt();
+                    for (int j = 0; j < l; j++)
+                    {
+                        Scanner input = new Scanner(System.in);
+                        a[i][j] = input.nextFloat();
+                        System.out.println(i + " " + j + " " + a[i][j]);
+                    }
                 }
                 return a;
             }
+    public void showArray(float[][] arr, int m, int n)
+    {
+        System.out.println();
+        for (int i = 0; i < m; i++)
+        {
+            for (int j = 0; j < n; j++)
+            {
+                System.out.print(/*"Элемент [" + i + "][" + j + "] " + */arr[i][j] + "  ");
+            }
+            System.out.println();
+        }
+        // return a;
+    }
 }
 public class ArrayMethodDemo {
     public static void main(String[] args) {
+        System.out.println("Введите размерность массива (два натуральных числа, завершая клавишей \"Enter\"");
+        Scanner input = new Scanner(System.in);
+        int rows = input.nextInt();
+        int columns = input.nextInt();
+        System.out.println("Массив " + rows + " " + columns);
         MyClass amd = new MyClass();
-        //float[] myArray = {1.5F, 2F, 3.75F, 4.15F, 5.24F};
-        // amd.printFirstElement(myArray);
-        int[] myArray2 = amd.returnArray(5);
-        System.out.println(Arrays.toString(myArray2));
+        float[][] myArray1 = amd.returnArray(2, 3);
+        float[][] myArray2 = amd.returnArray(2, 3);
+        amd.showArray(myArray1, 2,3);
+        amd.showArray(myArray2, 2,3);
     }
 }
