@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 class MyClass{
 
-public void printFirstElement(int[] a)
+public void printFirstElement(float[] a)
 {
 System.out.println("The first element is " + a[0]);
 }
@@ -26,7 +26,7 @@ public static void main(String[] args) {
 
 MyClass amd = new MyClass();
 
-int[] myArray = {1, 2, 3, 4, 5};
+float[] myArray = {1.5F, 2F, 3.75F, 4.15F, 5.24F};
 amd.printFirstElement(myArray);
 
 int[] myArray2 = amd.returnArray();
