@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ArreyMethodDemo.iml" filepath="$PROJECT_DIR$/ArreyMethodDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MatrixCount.iml" filepath="$PROJECT_DIR$/MatrixCount.iml" />
     </modules>
   </component>
 </project>
